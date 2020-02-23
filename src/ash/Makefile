@@ -12,6 +12,9 @@ INCLUDE_FILES += include/article_string/article_string_factory.hpp \
 	include/article_string/article_string_item.hpp \
 	include/article_string/bill_document_visitor.hpp
 
+SRC = $(TARGET).cpp
+OBJ = $(pathsubst %cpp,%.o, $(SRC))
+
 all: $(TARGET)
 
 $(TARGET): $(TARGET).cpp $(TRACER) $(INCLUDE_FILES)

@@ -1,4 +1,4 @@
-.PHONY: all bin lib src sql clean
+.PHONY: all bin lib src sql clean build release tar
 
 #
 # common project config
@@ -34,12 +34,6 @@ clang-format:
 
 BILLDOCTOOL := $(PROJECT_DIR)/src
 
-XMLDOCPARSER := $(BILLDOCTOOL)/xmldocparser
-XMLDOCPARSER_INCLUDE := -I$(XMLDOCPARSER)/include \
-	-I$(XMLDOCPARSER)/include/xml_item \
-	-I$(XMLDOCPARSER)/include/xml_document \
-	-I$(XMLDOCPARSER)/include/utl
-
 COMMON := $(BILLDOCTOOL)/common
 COMMON_INCLUDE := -I$(COMMON)/include
 
@@ -49,6 +43,14 @@ TRACER := $(TRACE)/trace.cpp
 
 DBUTL := $(BILLDOCTOOL)/dbutl
 DBUTL_INCLUDE := -I$(DBUTL)/include
+
+XMLDOCPARSER := $(BILLDOCTOOL)/xmldocparser
+XMLDOCPARSER_INCLUDE := -I$(XMLDOCPARSER)/include \
+	-I$(XMLDOCPARSER)/include/xml_item \
+	-I$(XMLDOCPARSER)/include/xml_document \
+	-I$(XMLDOCPARSER)/include/utl
+
+VPATH := $(COMMON) $(TRACE) $(DBUTIL) $(XMLDOCPARSER) 
 
 INCLUDE_FILES := $(XMLDOCPARSER)/include/bill_document.hpp \
 	$(XMLDOCPARSER)/include/bill_document_factory.hpp \
