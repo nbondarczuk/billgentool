@@ -79,7 +79,7 @@ int main(int argn, char **argv) {
 	// Load XML files using parsing factory
 	TRACE("Started");
     XMLDocumentFactory xml_factory;
-    std::map<std::string, BillDocument *> docs;	
+    std::map<std::string, BillDocument *> docs;
 	TRACE(std::string("Found XML files: ") + lexical_cast<string>(files.size()));
 	for (auto it = files.begin(); it != files.end(); ++it) {
 		TRACE(std::string("Loading XML file: ") + *it);
