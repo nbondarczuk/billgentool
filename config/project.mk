@@ -19,6 +19,7 @@ ORACLE_INCLUDE = -I$(ORACLE_CLIENT)/sdk/include
 ORACLE_LDFLAGS = -L$(ORACLE_CLIENT) -lclntsh -locci -lclntsh
 
 CFLAGS := -std=c++0x -g -fpermissive -D__USE_TRACE__
+CPPFLAGS += -MMD
 
 #
 # common utility targets
