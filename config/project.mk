@@ -9,17 +9,18 @@ DIR := $(shell pwd)
 PROJECT_DIR := $(DIR)/../..
 CLANG_STYLE := "{BasedOnStyle: Google, IndentWidth: 4, ColumnLimit: 240}"
 
-CXX := g++
-
 RAPIDXML = $(PROJECT_DIR)/src/rapidxml
 RAPIDXML_INCLUDE = -I$(RAPIDXML)/include
 
 ORACLE_CLIENT := $(PROJECT_DIR)/oracle/instantclient_12_2/$(PLATFORM)
-ORACLE_INCLUDE = -I$(ORACLE_CLIENT)/sdk/include
-ORACLE_LDFLAGS = -L$(ORACLE_CLIENT) -lclntsh -locci -lclntsh
+ORACLE_INCLUDE := -I$(ORACLE_CLIENT)/sdk/include
+ORACLE_LDFLAGS := -L$(ORACLE_CLIENT) -lclntsh -locci -lclntsh
 
+CXX := g++
 CFLAGS := -std=c++0x -g -fpermissive -D__USE_TRACE__
-CPPFLAGS += -MMD
+CFLAGS += -MMD
+CFLAGS += $(ORACLE_INCLUDE)
+LDFLAGS += $(ORACLE_LDFLAGS)
 
 #
 # common utility targets

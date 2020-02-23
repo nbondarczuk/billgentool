@@ -18,7 +18,7 @@ OBJ = $(pathsubst %cpp,%.o, $(SRC))
 all: $(TARGET)
 
 $(TARGET): $(TARGET).cpp $(TRACER) $(INCLUDE_FILES)
-	$(CXX) $(INCLUDE) $(CPPFLAGS) $(CFLAGS) -o $@ $< $(TRACER) $(ORACLE_INCLUDE) $(ORACLE_LDFLAGS)
+	$(CXX) $(INCLUDE) $(CPPFLAGS) $(CFLAGS) -o $@ $< $(TRACER) $(LDFLAGS)
 
 install: $(TARGET)
 	install $(TARGET) $(BILLDOCTOOL)/bin/$(PLATFORM)/$(TARGET)
