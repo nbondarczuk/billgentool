@@ -1,11 +1,8 @@
-CXX = g++
-
 OPTIONS = -std=c++0x -g -fpermissive -D__USE_TRACE__
 
 TARGET = ash
 
 ORACLE_INCLUDE = -I$(ORACLE_CLIENT)/sdk/include
-
 ORACLE_LDFLAGS = -L$(ORACLE_CLIENT) -lclntsh -locci -lclntsh
 
 BILLDOCTOOL = ../..
