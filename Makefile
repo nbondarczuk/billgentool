@@ -1,10 +1,12 @@
 all:
-	(cd src; make all)
+	$(MAKE) -C src $@
 
 clean:
-	(cd src; make clean)
+	$(MAKE) -C src $@
 	rm -f bin/*
 	rm -f lib/*
 
 install:
-	(cd src; make install)
+	$(MAKE) -C src $@
+
+include config/project.mk

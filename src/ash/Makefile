@@ -128,4 +128,4 @@ tar:
 	tar -cvf $(HOME)/ash.tar .
 	gzip $(HOME)/ash.tar
 
-.PHONY = sql
+include ../../config/project.mk

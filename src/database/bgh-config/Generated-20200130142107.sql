@@ -1,0 +1,10 @@
+--------------------------------------------------------
+--  File created - Thursday-January-30-2020   
+--------------------------------------------------------
+@C:\Users\ID048068\BGH_CHARGE_ITEM_CONFIGURATION.sql
+@C:\Users\ID048068\BGH_CHARGE_ITEM_CONFIGURATION_DATA_TABLE.sql
+@C:\Users\ID048068\PK_NBGH_CHARGE_ITEM_CONFIG.sql
+@C:\Users\ID048068\UC_BGH_CHARGE_ITEM_CONFIG2_01.sql
+@C:\Users\ID048068\BGH_CHARGE_ITEM_CONFIG_ON_INS.sql
+@C:\Users\ID048068\BGH_CHARGE_ITEM_CONFIGURATION_CONSTRAINT.sql
+@C:\Users\ID048068\BGH_CHARGE_ITEM_CONFIGURATION_REFCONSTRAINT.sql

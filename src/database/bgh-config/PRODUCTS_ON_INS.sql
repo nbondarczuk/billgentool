@@ -1,0 +1,15 @@
+--------------------------------------------------------
+--  DDL for Trigger PRODUCTS_ON_INS
+--------------------------------------------------------
+
+  CREATE OR REPLACE EDITIONABLE TRIGGER "BGH"."PRODUCTS_ON_INS" 
+  BEFORE INSERT ON BGH.PRODUCTS
+  FOR EACH ROW
+BEGIN
+  IF INSERTING THEN
+    SELECT BGH.PRODUCTS_SEQ.NEXTVAL INTO :NEW.PRODUCT_ID FROM DUAL;
+  END IF;
+END PRODUCTS_NEW_ON_INS;
+
+/
+ALTER TRIGGER "BGH"."PRODUCTS_ON_INS" ENABLE;

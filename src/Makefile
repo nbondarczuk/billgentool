@@ -1,8 +1,10 @@
 all:
-	(cd ash; make all)
+	$(MAKE) -C ash $@
 
 clean:
-	(cd ash; make clean)
+	$(MAKE) -C ash $@
 
 install:
-	(cd ash; make install)
+	$(MAKE) -C ash $@
+
+include ../config/project.mk

@@ -1,0 +1,14 @@
+--------------------------------------------------------
+--  File created - Thursday-January-30-2020   
+--------------------------------------------------------
+@C:\Users\ID048068\BGH_INVOICE_GROUPS.sql
+@C:\Users\ID048068\BGH_INVOICE_GROUPS_DATA_TABLE.sql
+@C:\Users\ID048068\PK_BGH_INVOICE_GROUPS.sql
+@C:\Users\ID048068\UC_BGH_INVOICE_GROUPS_01.sql
+@C:\Users\ID048068\UC_BGH_INVOICE_GROUPS_02.sql
+@C:\Users\ID048068\UC_BGH_INVOICE_GROUPS_03.sql
+@C:\Users\ID048068\UC_BGH_INVOICE_GROUPS_04.sql
+@C:\Users\ID048068\UC_BGH_INVOICE_GROUPS_05.sql
+@C:\Users\ID048068\BGH_INVOICE_GROUPS_ON_INS.sql
+@C:\Users\ID048068\BGH_INVOICE_GROUPS_CONSTRAINT.sql
+@C:\Users\ID048068\BGH_INVOICE_GROUPS_REFCONSTRAINT.sql
