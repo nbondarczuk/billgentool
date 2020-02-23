@@ -1,4 +1,4 @@
-CC = g++
+CXX = g++
 
 OPTIONS = -std=c++0x -g -fpermissive -D__USE_TRACE__
 
@@ -99,7 +99,7 @@ INCLUDE_HPP = $(XMLDOCPARSER)/include/bill_document.hpp \
 all: $(TARGET)
 
 $(TARGET): $(INCLUDE_HPP) $(TARGET).cpp ../trace/trace.cpp
-	$(CC) $(INCLUDE) $(OPTIONS) -o $(TARGET) $(TARGET).cpp ../trace/trace.cpp $(ORACLE_INCLUDE) $(ORACLE_LDFLAGS)
+	$(CXX) $(INCLUDE) $(OPTIONS) -o $(TARGET) $(TARGET).cpp ../trace/trace.cpp $(ORACLE_INCLUDE) $(ORACLE_LDFLAGS)
 
 clang-format:
 	clang-format -style="{BasedOnStyle: Google, IndentWidth: 4, ColumnLimit: 240}" -i \

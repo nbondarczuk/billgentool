@@ -1,0 +1,17 @@
+SDK Package Information
+=======================
+
+Tue Jan  9 23:53:25 PST 2018
+
+Client Shared Library 64-bit - 12.2.0.1.0
+
+System name:	Darwin
+Release:	15.6.0
+Version:	Darwin Kernel Version 15.6.0: Sun Jun  4 21:43:07 PDT 2017; root:xnu-3248.70.3~1/RELEASE_X86_64
+Machine:	x86_64
+
+Operating in ORACLE_HOME environment.
+
+Small timezone file = timezone_26.dat
+Large timezone file = timezlrg_26.dat
+
