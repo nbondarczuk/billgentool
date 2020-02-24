@@ -1,5 +1,3 @@
-.PHONY: all bin lib src sql clean build release tar
-
 #
 # common project config
 #
@@ -7,10 +5,6 @@
 PLATFORM := $(shell uname -sm | tr ' ' '_')
 DIR := $(shell pwd)
 PROJECT_DIR := $(DIR)/../..
-CLANG_STYLE := "{BasedOnStyle: Google, IndentWidth: 4, ColumnLimit: 240}"
-
-RAPIDXML = $(PROJECT_DIR)/src/rapidxml
-RAPIDXML_INCLUDE = -I$(RAPIDXML)/include
 
 ORACLE_CLIENT := $(PROJECT_DIR)/oracle/instantclient_12_2/$(PLATFORM)
 ORACLE_INCLUDE := -I$(ORACLE_CLIENT)/sdk/include
@@ -22,18 +16,16 @@ CFLAGS += -MMD
 CFLAGS += $(ORACLE_INCLUDE)
 LDFLAGS += $(ORACLE_LDFLAGS)
 
-#
-# common utility targets
-#
-
-clang-format:
-	clang-format -style=$(CLANG_STYLE) -i `find . -name *.[ch]pp`
+CLANG_STYLE := "{BasedOnStyle: Google, IndentWidth: 4, ColumnLimit: 240}"
 
 #
 # components
 #
 
 BILLDOCTOOL := $(PROJECT_DIR)/src
+
+RAPIDXML = $(BILLDOCTOOL)/rapidxml
+RAPIDXML_INCLUDE = -I$(RAPIDXML)/include
 
 COMMON := $(BILLDOCTOOL)/common
 COMMON_INCLUDE := -I$(COMMON)/include
@@ -108,5 +100,14 @@ INCLUDE_FILES := $(XMLDOCPARSER)/include/bill_document.hpp \
 	$(COMMON)/include/strutl.hpp \
 	$(TRACE)/include/trace.hpp \
 	$(DBUTL)/include/dbutl.hpp
+
+#
+# common utility targets
+#
+
+clang-format:
+	clang-format -style=$(CLANG_STYLE) -i `find . -name *.[ch]pp`
+
+.PHONY: all bin lib src sql clean build release tar
 
 

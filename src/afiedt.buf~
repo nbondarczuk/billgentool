@@ -1,0 +1,2 @@
+select count(*) fro all_views
+/
